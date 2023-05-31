@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "937214609893",
+    "project_id": "mwpaciente",
+    "storage_bucket": "mwpaciente.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937214609893:android:e81f9a9a0d80c780acc70c",
+        "android_client_info": {
+          "package_name": "io.medicalware.apppaciente"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "937214609893-rt4ld0qekimu6dbck3m6hq6pmhobftgi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.medicalware.apppaciente",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "937214609893-v49s3he8mh2cuh1u5q7kbo3pm5crakl5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAe2LGVv-JBKSH1UQOrgh2Y9uXp-9PMFVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "937214609893-v49s3he8mh2cuh1u5q7kbo3pm5crakl5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "937214609893-a97re0jhndfsco04udkvp5cdng9h2438.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.medicalware.apppaciente"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

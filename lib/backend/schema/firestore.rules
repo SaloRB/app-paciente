@@ -1,0 +1,86 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if false;
+    }
+
+    match /citas/{document} {
+      allow create: if false;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if false;
+    }
+
+    match /medicos/{document} {
+      allow create: if false;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /analisis/{document} {
+      allow create: if false;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if false;
+    }
+
+    match /users/{parent}/diagnosticos/{document} {
+      allow create: if false;
+      allow read: if resource.data.paciente == /databases/$(database)/documents/users/$(request.auth.uid);
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/diagnosticos/{document} {
+      allow read: if resource.data.paciente == /databases/$(database)/documents/users/$(request.auth.uid);
+    }
+
+
+    match /solicitud_cita/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if false;
+    }
+
+    match /signos_vitales/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if false;
+    }
+
+    match /medicamento/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if false;
+    }
+
+    match /chats/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if false;
+    }
+
+    match /chat_messages/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if false;
+    }
+
+    match /encuestas/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if true;
+      allow delete: if true;
+    }
+  }
+}
